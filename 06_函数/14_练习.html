@@ -54,15 +54,15 @@
         fn(a)
         console.log(a) // 1 */
 
-            console.log(a)  // 2
+            console.log(a)  // alert（2）（执行的是下面提升的函数的代码）
 
-            var a = 1
+            var a = 1 //这里的var a会直接提升，代表a被声明了，下面所有的var a从这里开始都没有用了，因为已经被提升过了，与79行作比较
 
             console.log(a) // 1
 
             function a() {
                 alert(2)
-            }
+            }  //函数作用域会直接提升到最前面
 
             console.log(a) // 1
 
@@ -76,7 +76,7 @@
 
             console.log(a) // 4
 
-            var a
+            var a  //提升，所以根本不执行
 
             console.log(a) // 4
         </script>
