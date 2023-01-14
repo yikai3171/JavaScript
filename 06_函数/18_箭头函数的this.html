@@ -50,7 +50,7 @@
                     // t()
 
                     const t2 = () => {
-                        console.log("t2 -->", this)
+                        console.log("t2 -->", this) //这里的this由外层决定（因为是箭头函数）而这里外层作用域为obj，外层是sayhello，而sayhello的this为obj，那么箭头函数里面这个this也就是obj
                     }
 
                     t2()
