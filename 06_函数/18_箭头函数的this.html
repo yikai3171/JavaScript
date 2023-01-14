@@ -41,11 +41,11 @@
                 name:"孙悟空",
                 fn, // fn:fn（简写属性）
                 fn2,
-                sayHello(){
+                sayHello(){ //sayHello:function()这里省略了:function,一样都是向对象中添加一个新的方法
                     console.log(this.name)
 
                     // function t(){
-                    //     console.log("t -->", this)
+                    //     console.log("t -->", this)  //这里this由调用方式决定，应为这里的调用方式为下面的t()（是函数形式的调用），所以这里的this为window
                     // }
                     // t()
 
