@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <script>
-            /* var a = 1
+            /* var a = 1  //全局变量a
         function fn(){
-            a = 2
-            console.log(a) // 2
+            a = 2  //给a赋值先要找到a，往前找发现函数没有设置形参（如果有形参，那么a相当于在函数中被声明了，那就是局部变量），所以再往外层作用域找，就找到了全局变量a
+            console.log(a) // 2  （总共就一个a，函数里面把它变成2了，那这里所以也为2）
         }
         fn()
         console.log(a) // 2 */
@@ -18,14 +18,14 @@
 
             /*  var a = 1
         function fn(){
-            console.log(a) //undefined
-            var a = 2
+            console.log(a) //undefined （var a 声明了（因为提升了）但是没有赋值，所以是undefined）
+            var a = 2  //这里相当于把var a 提升到了函数的最上面，也就是第一个console.log（a）的上面（没有跑到函数外面去） 所以这里的a为局部变量（写var了）
             console.log(a) // 2
         }
         fn()
         console.log(a) // 1 */
 
-            // 定义形参就相当于在函数中声明了对应的变量，但是没有赋值
+            // 定义形参就相当于在函数中声明了对应的变量，但是没有赋值！！！！！
             /* var a = 1
         function fn(a){
             console.log(a) //undefined
