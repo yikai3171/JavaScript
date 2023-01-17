@@ -39,7 +39,7 @@
             for (let j = 0; j < arr.length - 1; j++) {
                 for (let i = 0; i < arr.length - 1; i++) {
                     // arr[i] 前边的元素 arr[i+1] 后边元素
-                    if (arr[i] < arr[i + 1]) {
+                    if (arr[i] > arr[i + 1]) {
                         // 大数在前，小数在后，需要交换两个元素的位置
                         let temp = arr[i] // 临时变量用来存储arr[i]的值
                         arr[i] = arr[i + 1] // 将arr[i+1]的值赋给arr[i]
