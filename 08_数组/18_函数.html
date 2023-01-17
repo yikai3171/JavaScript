@@ -31,12 +31,12 @@
             // fn()
 
             function outer(){
-                let num = 0 // 位于函数作用域中
+                let num = 0 // 位于函数作用域中   外部函数
 
                 return () => {
                     num++
-                    console.log(num)
-                }
+                    console.log(num)  //内部函数引用了外部函数的变量
+                }//内部函数
             }
 
             const newFn = outer()
