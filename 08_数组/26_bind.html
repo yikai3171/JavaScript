@@ -17,7 +17,7 @@
                     6. 通过bind返回的函数，this由bind第一个参数决定（无法修改）
 
                 bind() 是函数的方法，可以用来创建一个新的函数
-                    - bind可以为新函数绑定this
+                    - bind可以为新函数绑定this（永远绑定）
                     - bind可以为新函数绑定参数
 
                 箭头函数没有自身的this，它的this由外层作用域决定，
@@ -32,7 +32,7 @@
 
             const obj = {name:"孙悟空"}
 
-            const newFn = fn.bind(obj, 10, 20, 30)
+            const newFn = fn.bind(obj, 10, 20, 30) //把新函数的值固定为10，20，30
 
             // newFn()
 
